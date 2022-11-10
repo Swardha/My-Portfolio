@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .profile {
   width: 100px;
   height: 100px;
@@ -17,14 +22,6 @@
 body {
   padding-left: 15rem;
   font-family: "Open Sans", sans-serif;
-}
-
-.preloader {
-  height: 100vh;
-  width: 100%;
-  background-color: #000000;
-  z-index: 100;
-  position: fixed;
 }
 
 .cursor-1 {
@@ -112,11 +109,6 @@ body {
     height:100%;
     align-items: center;
 } */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 header {
   display: flex;
   flex-direction: column;
@@ -178,6 +170,10 @@ header .media a:hover {
   cursor: pointer;
 }
 
+header .show {
+  display: block;
+}
+
 section {
   min-height: 100vh;
   padding: 1rem 5%;
@@ -190,7 +186,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  background: url("../images/portfolio3.jpg") no-repeat center center;
+  background: url("../images/portfolio3.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -255,39 +251,55 @@ section {
 }
 
 .container {
-  margin-top: 2rem;
+  margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 2rem;
   align-items: center;
+  justify-content: center;
+  place-items: center;
 }
 
 .container .info {
-  flex: 1 1 30rem;
+  flex: 1 1 400px;
 }
 
 .container .info h3 {
   font-size: 30px;
+  margin-top: 4rem;
 }
 
 .container .info p {
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 20px;
   letter-spacing: 1px;
 }
 
-.container .image {
-  flex: 1 1 30rem;
-  padding: 3rem;
+.container .details {
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+  flex: 1 1 400px;
 }
 
-.container .image img {
-  border: 2px solid black;
-  border-radius: 50%;
-  /* height:100%; */
-  width: 100%;
-  height: 500px;
-  /* width:500px; */
+.details p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: flex;
+}
+
+.para-top {
+  margin-top: 2rem;
+}
+
+.details strong {
+  margin-right: 5px;
+}
+
+.details .fa-chevron-right {
+  margin-right: 6px;
+  color: #1E40AF;
+  font-weight: bold;
 }
 
 .main-skill {
@@ -405,6 +417,10 @@ section {
   font-weight: bold;
 }
 
+.para-btn a:hover {
+  color: #EC4899;
+}
+
 /* contact section */
 .contact {
   background-color: #C7D2FE;
@@ -511,6 +527,12 @@ section {
     /* opacity: 0; */
     left: -300px;
   }
+  header.show {
+    /* width:50vw; */
+    opacity: 1;
+    visibility: visible;
+    left: 0px;
+  }
   .cursor-1, .cursor-2 {
     display: none;
   }
@@ -518,10 +540,6 @@ section {
     padding: 0;
   }
   #toggle {
-    opacity: 1;
-  }
-  header.show {
-    /* width:50vw; */
     opacity: 1;
   }
 }

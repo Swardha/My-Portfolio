@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html,body{
+    width:100%;
+    overflow-x: hidden;
+}
+
 .profile{
     width:100px;
     height:100px;
@@ -19,21 +24,13 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-// preloader section
-.preloader{
-    height: 100vh;
-    width:100%;
-    background-color:#000000;
-    z-index: 100;
-    position: fixed;
-}
-
 // ul{
 //     position: absolute;
 //     align-items: center;
 //     justify-content: center;
 // }
 
+// cursor section
 .cursor-1{
     position:absolute;
     top:500px;
@@ -63,6 +60,7 @@ body{
     transition: 0.2s linear;
 }
 
+// toggle-btn section
 #toggle{
     width:40px;
     height:40px;
@@ -119,10 +117,9 @@ body{
     height:100%;
     align-items: center;
 } */
-html,body{
-    width:100%;
-    overflow-x: hidden;
-}
+
+
+// header section
 header{
     display:flex;
     flex-direction: column;
@@ -183,11 +180,15 @@ header .media a:hover{
     cursor: pointer;
 }
 
+header .show{
+    display:block;
+}
+
+// home section
 section{
     min-height: 100vh;
     padding: 1rem 5%;
     overflow: hidden;
- 
 }
 
 .home{
@@ -196,7 +197,7 @@ section{
     justify-content: center;
     flex-wrap: wrap;
     width:100%;
-    background:url('../images/portfolio3.jpg') no-repeat center center;
+    background:url('../images/portfolio3.jpg') no-repeat center center fixed;
     background-size:cover;
 }
 /* 
@@ -221,6 +222,8 @@ section{
 .home .content .auto{
     color:rgb(11, 15, 224);
 }
+
+
 /* about section */
 
 .about{
@@ -257,40 +260,58 @@ section{
     letter-spacing: 2px;
 }
  .container{
-    margin-top: 2rem;
+    margin: 2rem auto;
     display:flex;
     flex-wrap: wrap;
-    gap:1.25rem;
+    gap:2rem;
     align-items: center;
+    justify-content: center;
+    place-items: center;
 }
 
 .container .info{
-    flex:1 1 30rem;
+    flex:1 1 400px;
 }
 
 .container .info h3{
     font-size: 30px;
+    margin-top: 4rem;
 }
 
 .container .info p{
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 20px;
     letter-spacing: 1px;
 }
-.container .image{
-    flex:1 1 30rem;
-    padding:3rem;
+.container .details{
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    flex: 1 1 400px;
+    // padding:3rem;
+    // padding:3rem;
 }
 
-.container .image img{
-    border:2px solid black;
-    border-radius: 50%;
-    /* height:100%; */
-    width: 100%;
-    height: 500px;
-  
-    /* width:500px; */
+.details p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: flex;
 }
+
+.para-top{
+    margin-top: 2rem;
+}
+.details strong{
+    margin-right: 5px;
+}
+.details .fa-chevron-right{
+    margin-right: 6px;
+    color:#1E40AF;
+    font-weight: bold;
+}
+// .show-info > div:last-child article:not(:last-child)
+
+// skills section
 
 .main-skill{
     padding: 1rem 5%;
@@ -404,6 +425,11 @@ section{
     font-weight: bold;
  }
 
+ .para-btn a:hover{
+    color:#EC4899;
+ }
+
+
 /* contact section */
 
  .contact{
@@ -504,6 +530,14 @@ section{
         left:-300px;
     }
 
+    header.show{
+        /* width:50vw; */
+        opacity: 1;
+        visibility: visible;
+        left:0px;
+         
+     }
+
     .cursor-1, .cursor-2{
         display:none;
     }
@@ -514,12 +548,6 @@ section{
 
     #toggle{
         opacity: 1;
-    }
-
-    header.show{
-       /* width:50vw; */
-       opacity: 1;
-        
     }
 
    
@@ -538,5 +566,6 @@ section{
         width:400px;
         margin: 2rem auto;
     }
+   
 }
 
