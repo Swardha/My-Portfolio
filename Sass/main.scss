@@ -324,8 +324,11 @@ section{
     align-items: center;
     justify-content: center;
     gap:1.25rem;
+    place-items: center;
 }
-
+// .imgg{
+//     align-items: center;
+// }
 .skills img{
     width: 200px;
     height:200px;
@@ -337,6 +340,7 @@ section{
 .projects{
     background-color: white;
 }
+
 .projects-box{
     /* align-items: center;
     justify-content: center; */
@@ -559,7 +563,7 @@ section{
         overflow-x: hidden;
     }
     .skills img{
-        margin-left: 5rem;
+        margin-left: 10rem;
     }
 
      .contact .contact-box{
@@ -567,5 +571,12 @@ section{
         margin: 2rem auto;
     }
    
+}
+
+@media(max-width:500px){
+    .skills img{
+        align-items: center;
+        margin:1rem 7rem ;
+    }
 }
 

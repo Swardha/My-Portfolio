@@ -314,6 +314,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  place-items: center;
 }
 
 .skills img {
@@ -549,10 +550,16 @@ section {
     overflow-x: hidden;
   }
   .skills img {
-    margin-left: 5rem;
+    margin-left: 10rem;
   }
   .contact .contact-box {
     width: 400px;
     margin: 2rem auto;
+  }
+}
+@media (max-width: 500px) {
+  .skills img {
+    align-items: center;
+    margin: 1rem 7rem;
   }
 }/*# sourceMappingURL=main.css.map */
